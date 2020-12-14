@@ -1,0 +1,51 @@
+/*General*/
+body {background: url(../images/General/BG/bg.jpg) no-repeat center top/cover; width: 100%;}
+ * { margin: 0; padding: 0; box-sizing: border-box;}
+header {background: rgba(0, 0, 0, ) no-repeat center top/cover; height:8vw; width: 100%;}
+.logo { float: left; margin-top:1vw; margin-left:1vw ; width: 8vw; filter: drop-shadow(0.5vw 0.5vw 0.5vw black);}
+.logo:hover {filter: drop-shadow(0 0 0.3vw rgba(81, 1, 88, 0.808)); transform: translate(0, 10%);transition: .3s;}
+.title { float: left; margin-top: 2vw; margin-left: 2vw; width: 18vw;}
+.Pages { float: left; margin-top: 2.5vw;  margin-left: 5%; width: 40vw; }
+   .Pages ul {  list-style: none; margin: 0;  }
+   .Pages li {float: left; display:inline; margin-left: 2vw; }
+   .Pages li:hover {filter: drop-shadow(0 0 0.3vw rgba(81, 1, 88, 0.808)); transition: .3s; text-decoration: none; transform: translate(0, 10%);}
+.SocialNet { float: right; margin-top: 1.5vw; margin-right: 1vw; width: 19vw ; filter: drop-shadow(0.5vw 0.5vw 0.5vw black);}
+.SocialNet img:hover {filter: drop-shadow(0 0 0.5vw rgba(81, 1, 88, 0.808)); transform: translate(0, 10%);transition: .3s;}
+
+p {text-align: left;}
+a {color: white; text-decoration: none; }
+a:hover { text-shadow:white 0 0 5vw; text-decoration: none;   }
+/* p:first-letter {color:rgba(177, 44, 238, 0.938);} */
+
+/*Выпадающее меню*/
+#port > li {display: inline-block; position: relative;}
+#port > li > a:before {
+   content: ""; position: absolute; z-index: 5; left: 50%; top: 100%; width: 0.7vw; filter: drop-shadow(0 0 0.5vw white);
+   height: 0.7vw; background: white; border-radius: 50%; transform: translate(-50%, 2vw); opacity: 0;transition: .3s;}
+#port li:hover a:before {transform: translate(-50%, 0); opacity: 1;}
+.submenu {padding-top: 1vw; padding-bottom: 1vw; position: absolute; z-index: 4; left: 49%; width: 10vw;
+   background: rgba(51, 0, 71, 0.308); border-radius: 0.7vw; visibility: hidden; opacity: 0;
+   transform: translate(-50%,2vw); transition: .3s; filter: drop-shadow(0 0 0.5vw black);}
+#port > li:hover .submenu {visibility: visible; opacity: 1; transform: translate(-50%, 0);}
+.submenu a {font-size: 1.2vw; transition: .3s linear; text-shadow: black 0 0 0.5vw; }
+
+/*FONTs*/
+@font-face
+{
+ font-family: FONT;
+ src: url(..//FONTs/JUSTICE\LEAGUE.ttf); 
+ font-family: FONT2;
+ src: url(..//FONTs/trebucbd.ttf);
+}
+   h1 { font-family: FONT, 'JUSTICE LEAGUE'; font-size: 3vw; color: white; text-shadow: black 0 0 0.5vw; filter: drop-shadow(0.5vw 0.5vw 0.5vw black);}
+   h2 { font-family: FONT2, 'trebucbd'; font-size: 3vw; text-shadow: black 0 0 0.5vw; filter: drop-shadow(0.5vw 0.5vw 0.5vw black);}
+   h3 { font-family: FONT2, 'trebucbd'; font-size: 1vw; color:rgba(177, 44, 238, 0.938); text-shadow: black 0 0 0.5vw; filter: drop-shadow(0.5vw 0.5vw 0.5vw black); }
+   h4 { font-family: FONT2, 'trebucbd'; font-size: 2vw; color:white; position: absolute; top: 12vw; width: 30vw; left: 22%;}
+
+
+footer { position:fixed; background: black no-repeat center top/cover; opacity: 80%; height:1.2vw; width: 100%; text-align: center; left: 0; bottom: 0; }
+
+/* #loader {background-color: black; height: 1500px; width:100%; position: fixed; top: 50%; left: 50%; transform: translate(-50% , -50%); z-index: 999;}
+#loader img {position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%);} */
+
+

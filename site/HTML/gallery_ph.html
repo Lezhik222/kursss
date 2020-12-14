@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KURS</title>
+        <link rel="stylesheet" href="../CSS/main.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() 
+                {$(window).scroll(function() 
+                    {
+                        if($(this).scrollTop() != 0) 
+                            {$('#up').fadeIn();}    
+                        else 
+                            {$('#up').fadeOut();}
+                    });
+                    $('#up').click(function() 
+                    {
+                        $('body,html').animate({scrollTop:0},700);
+                    });
+                });
+      </script>
+      <script>
+        var i=0;
+        var imgs=new Array(
+        '../images/Gallery/1.jpg',
+        '../images/Gallery/2.jpg',
+        '../images/Gallery/3.jpg',
+        '../images/Gallery/4.jpg',
+        '../images/Gallery/5.jpg',
+        '../images/Gallery/6.jpg');
+
+        function logSubmit() {
+            var image = document.getElementById('image');
+            var width = document.getElementById('width');
+            var height = document.getElementById('height');
+            var thickness = document.getElementById('thickness');
+            var alternative = document.getElementById('alternative');
+            image.style.width = width.value + 'vw';
+            image.style.height = height.value + 'vw';
+            image.style.border = thickness.value + 'vw solid #ff0000';
+            image.setAttribute("alt", alternative.value);
+        }
+
+        function imgsrc(){
+        var image=document.getElementById("image");
+        image.src=imgs[Math.floor(Math.random()*imgs.length)];
+        }
+    
+    </script>
+    </head>
+
+
+    <style>
+        .ph_js { margin: auto; display: block; text-align: center; margin-top: 2vw;}
+        .ph_js h2 {font-size: 2vw; color: white; margin-bottom: 1vw;}
+        .ph_js label {font-size: 1vw; color: white; text-align:left; }
+        .photo {width: 100%; text-align: center; margin-top: 2vw;}
+        .photo img {height: 25vw; margin-left: 1vw; margin-right: 1vw; filter: drop-shadow(0vw 0vw 0.4vw black);}
+        .photo img:hover {transform: scale(1.05) ;transition: .3s linear;}
+    </style>
+<header>
+   <header>
+    <div class ="logo">
+      <a href="../index.html"> <img src="../images/General/logo/logo_static.png" style="width:8.5vw;"></a>
+    </div> 
+         <div class="title">
+           <h3> PHOTOGRAPHER / VIDEOGRAPHER</h3>
+           <h1> Oleg Petrov</h1>
+         </div>
+        
+         <div class="Pages" >
+            <ul id="port">
+              <li><a> <h2>Portfolio</h2></a>  
+                <ul class="submenu">
+                  <li><a href="gallery_ph.html">Photography</a></li>
+                  <li><a href="gallery_vid.html">Videography</a></li> 
+                </ul> 
+              </li>    
+              <li><a href="Site(about.me).html"><h2>About Me</h2></a> </li>    
+              <li><a href="Site(price).html"><h2>Price</h2></a> </li>    
+            </ul>
+          </div>
+        <div class="SocialNet">  
+          <a href="https://www.instagram.com/_lezhik_ph_/"> <img src="../images/General/SocialNet/Instagram.png" style="width: 5vw; "></a> 
+          <a href="https://www.facebook.com/profile.php?id=100004142117968"> <img src="../images/General/SocialNet/facebook.png"style="width: 5vw; "></a>
+          <a href="https://t.me/I_lezhik_I"> <img src="../images/General/SocialNet/telegram.png"style="width: 5vw;"></a>
+      </div>     
+</header>
+<body>
+<!--
+  <div class="ph_js" >
+    <h2 >Change photo parameters</h2>
+    <form onsubmit="logSubmit(); return false">
+    <label for="width">Width</label>
+    <input type="number" name="width" id="width">
+    <br>
+    <label for="height">Height</label>
+    <input type="number" name="height" id="height">
+    <br>
+    <label for="thickness">Border thickness</label>
+    <input type="number" name="thickness" id="thickness">
+    <br>
+    <label for="alternative">Alternative text</label>
+    <input type="text" name="alternative" id="alternative">
+    <br>
+    <input style="margin-top:0.4vw" type="submit">
+    </form>
+    <img id="image" onclick="imgsrc();" src="../images/Gallery/1.jpg" alt="1" style="
+            margin:auto; margin-top: 1vw; display:block; width: 30vw; filter: drop-shadow(0.5vw 0.5vw 0.5vw black);">
+  </div>
+-->
+
+
+<div style="margin-top: 4vw;" class = "photo">
+   <a href="gallery_ph_solo.php"><img src = "../images/Gallery/3.jpg" style="width: 16.5vw;"></a> 
+    <img src = "../images/Gallery/5.jpg" >
+    <img src = "../images/Gallery/7.jpg" style="width: 16.5vw;">
+</div>
+
+<div id="up" style="position:fixed; right: 3vw; top: 3vw;"> <img src="../images/General/up/up.png" width="50vw" ></div>
+</body>
+
+<footer>
+    <h2 style="font-size: 1vw ; color: white; text-align: center;">© 2020. Oleg Petrov Prod. KHPI.</h2>
+  </footer>
+</html>
