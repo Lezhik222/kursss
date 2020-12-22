@@ -1,6 +1,6 @@
 <?php
 class DbConnect {
-    private $host = '192.168.31.188';
+    private $host = '192.168.0.114';
     private $dbName ='docker_database';
     private $user = 'root';
     private $pass = '12345';
@@ -13,6 +13,7 @@ class DbConnect {
         } catch(PDOException $e) {
             echo 'Database Error: ' . $e->getMessage();
         }
+        
     }
 }
 ?>

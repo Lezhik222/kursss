@@ -25,6 +25,11 @@
 
 <style>
   .info_aboutme { text-align: center; position: relative; margin-left: 50vw;}
+  .slider {  display: block; height: 40vw; overflow: hidden; position: relative; width: 23vw; margin: auto;text-align: center;filter: drop-shadow(0 0 0.5vw #000000cc); }
+  .before {width: 100%; position: absolute; overflow: hidden; transition: 1s ease-in-out ;z-index: -2;  }
+  .after{width: 0; position: absolute; overflow: hidden; transition: 1s ; z-index: -1; border-right: 0.3vw solid rgb(65, 0, 85);}
+ 
+  .slider:hover .after{width: 100%;}
 </style>
 
 <header>    
@@ -45,7 +50,7 @@
         </ul> 
       </li>    
       <li><a href="HTML/Site(about.me).html"><h2>About Me</h2></a> </li>    
-      <li><a href="HTML/Site(price).html"><h2>Price</h2></a> </li>    
+      <li><a href="PHP/Site(price).php"><h2>Price</h2></a> </li>    
     </ul>
   </div>
   <div class="SocialNet">  
@@ -56,12 +61,23 @@
   
 </header>
 <body style="background: url(images/General/BG/1.jpg) no-repeat center top/cover; width: 100%; ">
-  <div style="margin:auto; float:right; margin-right: 12vw; margin-top: 2vw;">
-    <h2 style="color: white; font-size: 2.2vw; margin-bottom: 2vw;">Try to edit photo by yourself!</h2>
-
+  <div style="float: right; margin-right: 10vw; margin-top: 1.3vw; ">
+    <h2 style="color: white; font-size: 2.2vw; margin-bottom: 1vw; text-align: center; position: relative; z-index: 1;">Try to edit photo by yourself!</h2>
+    <div class="slider">
+      <div class="before">
+        <img src="images/Gallery/3_1.jpg" style="width: 23vw;">
+        </div>
+        <div class="after">
+        <img src="images/Gallery/3.jpg" style="width: 23vw;">
+        </div>
+    </div>
   </div>
- 
- 
+    <!-- <form action="php/send.php" method="post">
+      <input type="text" name="fio" placeholder="Укажите ФИО" required>
+      <input type="text" name="email" placeholder="Укажите e-mail" required>
+      <input type="submit" value="Отправить">
+    </form> -->
+
 </body>
 <footer>
   <h2 style="font-size: 1vw ; color: white; text-align: center;">© 2020. Oleg Petrov Prod. KHPI.</h2>
